@@ -1,0 +1,304 @@
+{
+  "info": {
+    "_postman_id": "7da8459f-edc4-40ce-bfe4-d3d244142e13",
+    "name": "CLINICA CHICLAYO - GRUPO 7  Copiar",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59415860",
+    "_collection_link": "https://go.postman.co/collection/59415860-7da8459f-edc4-40ce-bfe4-d3d244142e13?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 - Listar triajes",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02 - Registrar hipotermia",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"paciente_dni\": \"12345678\",\r\n  \"temperatura\": 35.5,\r\n  \"frecuencia_cardiaca\": 75\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 - Registrar normal",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"paciente_dni\": \"87654321\",\r\n  \"temperatura\": 36.5,\r\n  \"frecuencia_cardiaca\": 80\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04 - Registrar fiebre",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"paciente_dni\": \"45678912\",\r\n  \"temperatura\": 38.5,\r\n  \"frecuencia_cardiaca\": 95\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05 - Consultar triaje",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje/{{id_triaje}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje",
+            "{{id_triaje}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "06 - Actualizar triaje",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"paciente_dni\": \"12345678\",\r\n  \"temperatura\": 37.5,\r\n  \"frecuencia_cardiaca\": 75\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje/{{id_triaje}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje",
+            "{{id_triaje}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "07 - Eliminar triaje",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje/{{id_triaje}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje",
+            "{{id_triaje}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "08 - Validación de datos",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"paciente_dni\": \"123\",\r\n  \"temperatura\": \"abc\",\r\n  \"frecuencia_cardiaca\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "09 - Consultar registro eliminado",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje/{{id_triaje}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje",
+            "{{id_triaje}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10 - Límite inferior normal",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"paciente_dni\": \"11112222\",\r\n  \"temperatura\": 36.0,\r\n  \"frecuencia_cardiaca\": 78\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/triaje",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "triaje"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    },
+    {
+      "key": "id_triaje",
+      "value": ""
+    }
+  ]
+}

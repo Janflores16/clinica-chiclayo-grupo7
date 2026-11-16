@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    container_name: clinica_grupo7_app
+    ports:
+      - "127.0.0.1:8085:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: clinica_grupo7_db
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_DATABASE: bd_clinica_chiclayo
+    ports:
+      - "127.0.0.1:3309:3306"
+    volumes:
+      - clinica_mysql_data:/var/lib/mysql
+
+volumes:
+  clinica_mysql_data:
